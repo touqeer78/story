@@ -1,0 +1,10 @@
+
+# The reason for this cheat sheet is that git does not have a proper way of looking into modified files.
+
+now to do that I have to do following.
+
+1. git log
+2. get sha codes for commit you are interested in.
+2.a. you can also use "git rev-parse --short HEAD" to get sha of head. and ame command but HEAD^ to get one before head.
+3. git show --pretty="" --name-status {91326fb2} -- this will show you what actually has happened in that commit.
+4. git diff HEAD^ HEAD -- ./config/routes.rb -- this will show the modified contents of file. in previous commit.
